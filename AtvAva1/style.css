@@ -1,0 +1,28 @@
+.colorTable:nth-child(even){
+    background-color: #e8e8e8;
+}
+
+.ministerio{
+    font-size: 20px;
+    color: #747474;
+}
+
+#numbers{
+    text-align: center;
+    font-size: 18px;
+}
+
+#estados{
+    font-size: 18px;
+}
+
+.rodape{
+    margin-left: 200px;
+}
+
+.fonte{
+    margin-left: 270px;
+}
+.brasil{
+    background-color: #c4180c;
+}
