@@ -1,0 +1,28 @@
+button{
+    background-color: skyblue;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: steelblue;
+    opacity: 3;
+}
+
+.campos{
+    margin-left: 10px;
+}
+
+input{
+    border-radius: 5px;
+}
+
+label{
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 808px){
+    .campos {
+      float: left;
+    }
+  }
