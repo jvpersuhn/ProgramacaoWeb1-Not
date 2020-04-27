@@ -1,0 +1,38 @@
+@media only screen and (min-width: 500px){
+  .numeroF {
+    float: left;
+  }
+}
+
+.numeroF {
+  margin: 10px;
+}
+
+div {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border:1px solid rgb(98, 104, 98);
+  border-radius:4px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:2px 4px;
+  text-decoration:none;
+  border-color:#474947;
+  background:linear-gradient(to bottom, #c1cec1 5%, #b6beb5 100%);
+  box-shadow:inset 0px 1px 0px 0px #dde2dd;
+  color:rgb(0, 0, 0);
+  text-shadow:0px 1px 0px #a8aca1;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #b6beb5 5%, #c1cec1 100%);
+  }
+
+  input{
+    border-radius: 5px;
+}
