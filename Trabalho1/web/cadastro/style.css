@@ -274,8 +274,8 @@ img {
 }
 
 .footer_area {
-    margin-top: 1000px;
     position: relative;
+    margin-top: 400px;
     z-index: 1;
     background-color: #38610B;
     padding: 70px 0 60px;
