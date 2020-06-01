@@ -14,6 +14,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login_style.css">
+    <script src="login_script.js"></script>
 
 </head>
 
@@ -77,7 +78,7 @@
         <div class="forms">
             <div class="campo">
                 <label for="email">E-mail:</label>
-                <input type="text" name="email" class="field">
+                <input id="email" type="text" name="email" class="field">
             </div>
             <div class="campo">
                 <label for="senha">Senha:</label>
@@ -85,7 +86,7 @@
             </div>
         </div>
         <div class="botoes">
-            <button class="button" type="submit">Enviar</button>
+            <button class="button" type="submit" onclick="check()">Enviar</button>
         </div>
         <div class="conta">
             <a href="../index/index.html">Criar conta</a>
