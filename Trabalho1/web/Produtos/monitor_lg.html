@@ -6,25 +6,20 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Title  -->
     <title>Sr Computador</title>
 
-    <!-- Core Style CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="faq_style.css">
 
 </head>
 
 <body>
-    <!-- ##### Header Area Start ##### -->
     <header class="header_area">
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
                 <!-- Logo -->
-                <a class="nav-brand" href="../index/index.html"><img src="../img/logoteste.png" alt=""></a>
+                <a class="nav-brand" href="index.html"><img src="../img/logoteste.png" alt=""></a>
                 <!-- Navbar Toggler -->
                 <div class="classy-navbar-toggler">
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -40,11 +35,41 @@
                         <ul>
                             <li><a href="#">Departamentos</a>
                                 <ul class="dropdown">
-                                    <li><a href="index.html">Hardware</a></li>
-                                    <li><a href="index.html">Perifericos</a></li>
-                                    <li><a href="index.html">Notebooks</a></li>
-                                    <li><a href="index.html">Monitores</a></li>
-                                    <li><a href="index.html">Cadeiras e mesas</a></li>
+                                    <li><a href="index.html">Hardware</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Processador</a></li>
+                                            <li><a href="index.html">Placa de video</a></li>
+                                            <li><a href="index.html">SSD</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index.html">Perifericos</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Mouse</a></li>
+                                            <li><a href="index.html">Teclado</a></li>
+                                            <li><a href="index.html">Cabos e acessorios</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index.html">Notebooks</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Acer</a></li>
+                                            <li><a href="index.html">Dell</a></li>
+                                            <li><a href="index.html">Apple</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index.html">Monitores</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Benq</a></li>
+                                            <li><a href="index.html">LG</a></li>
+                                            <li><a href="index.html">Asus</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index.html">Cadeiras e mesas</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Alfa</a></li>
+                                            <li><a href="index.html">DT3</a></li>
+                                            <li><a href="index.html">Dx Racer</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li><a href="blog.html">Login</a></li>
@@ -70,46 +95,46 @@
 
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
 
-    <div class="conteudo">
-        <p class="tituloFaq">Perguntas Frequentes</p>
-        <div class="linhaPadrao">
-            <!-- vazio -->
+    <div class="container">
+        <div class="row" style="display: flex; margin-top: 18%;">
+            <div class="col-md-6">
+                <img src="img/monitor_lg.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <h3 id="titulo_produto">Monitor LG</h3>
+
+                <div id="preco_produto">
+                    <h4>R$ 670,00</h4>
+                    <h5>À vista</h5>
+                </div>
+
+                <button type="button" class="btn btn-success" style="width: 250px; height: 100px; font-size: 25px; float: right;">Comprar</button>
+            </div>
         </div>
-        <div class="questions">
-            <p class="pergunta">Posso alterar o endereço de entrega com o objeto em transporte?</p>
-            <p class="resposta">Quando seu pedido já estiver em transporte, infelizmente não é possível alterar o endereço de entrega. Porém, você poderá nos contatar para verificar a possibilidade de retirada direto na transportadora, se houver uma base próxima à sua região.</p>
+        <div class="row">
+            <div class="col-12">
+                <h3 id="titulo_produto">Descrição</h3>
 
-            <p class="pergunta">Por que não estou conseguindo rastrear meu pedido?</p>
-            <p class="resposta">A atualização do rastreio pode levar até 48 horas após constar como enviado, tempo que é da transportadora dar entrada no produto e cadastrar no sistema, caso precise rastrear e não consegue após o prazo de 48 horas entre em contato conosco.</p>
-
-            <p class="pergunta">Quanto tempo leva para constatação do pagamento por boleto? E por cartão de crédito?</p>
-            <p class="resposta">A constatação de um pagamento via boleto e cartão de crédito pode levar até 48 horas úteis para ser compensado. Após o pagamento ser detectado, o pedido entrará em fase de "PROCESSO DE ENVIO"</p>
-
-            <p class="pergunta">O boleto venceu, tem como prolongar o prazo para pagamento?</p>
-            <p class="resposta">Infelizmente não é possível. O boleto deve ser pago até a data do vencimento, caso não seja pago, o sistema efetuará o cancelamento automaticamente. Caso passe a data do vencimento, será necessário gerar um novo pedido.</p>
-
-            <p class="pergunta">Como realizar o rastreio nos Correios?</p>
-            <p class="resposta">1º - Acesse http://www.correios.com.br;</p>
-            <p class="resposta">2º - Siga até o campo "Acompanhe seu objeto" e informe o protocolo de rastreio do seu pedido (recebido no e-mail de cadastro, referente à compra em nosso e-commerce);</p>
-            <p class="resposta">3º - Clique no ícone da lupa, à direita na barra.</p>
+                <div id="descricao_produto">
+                    <p>
+                        Lorem ipsum auctor dui ante aenean consequat class bibendum torquent, donec porta curabitur et accumsan mi per curae, feugiat inceptos senectus felis eleifend urna leo senectus. justo torquent a sem tincidunt tempor quisque nam curabitur in, felis imperdiet
+                        potenti eu nulla egestas cras. vehicula aliquam sagittis pretium varius pellentesque posuere bibendum justo, curabitur phasellus fusce auctor purus tellus commodo, pulvinar dolor etiam commodo metus risus platea. luctus ultrices
+                        aptent orci sit elit tempor purus potenti sed taciti, venenatis quis consectetur pharetra ultricies diam taciti vivamus sem, nunc nulla integer ac conubia turpis eu rutrum mattis.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
-
-    <!-- ##### Footer Area Start ##### -->
     <footer class="footer_area clearfix">
         <div class="container">
             <div class="row">
-                <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area d-flex mb-30">
-                        <!-- Logo -->
                         <div class="footer-logo mr-50">
                             <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
                         </div>
-                        <!-- Footer Menu -->
                         <div class="footer_menu">
                             <ul>
                                 <li><a href="shop.html">Quem Somos</a></li>
@@ -119,7 +144,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area mb-30">
                         <ul class="footer_widget_menu">
@@ -133,7 +157,6 @@
             </div>
 
             <div class="row align-items-end">
-                <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area">
                         <div class="footer_heading mb-30">
@@ -148,7 +171,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area">
                         <div class="footer_social_area">
@@ -165,21 +187,13 @@
 
 
     </footer>
-    <!-- ##### Footer Area End ##### -->
 
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="../exemple/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="../exemple/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="../exemple/js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="../exemple/js/plugins.js"></script>
-    <!-- Classy Nav js -->
-    <script src="../exemple/js/classy-nav.min.js"></script>
-    <!-- Active js -->
-    <script src="../exemple/js/active.js"></script>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/classy-nav.min.js"></script>
+    <script src="js/active.js"></script>
 
 </body>
 
