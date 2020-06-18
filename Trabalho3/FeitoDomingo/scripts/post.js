@@ -1,12 +1,22 @@
 function getParam() {
     var url_string = window.location.href;
     var url = new URL(url_string);
+    var c = ""
     var c = url.searchParams.get("id")
 
     return c
 }
 
 function getbyid() {
+
+    var param = getParam()
+
+    if (param != null) {
+        document.getElementById('cadastrar').disabled = true
+    } else {
+        document.getElementById('update').disabled = true
+    }
+
     var xhttp = new XMLHttpRequest()
     var url = "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/employee/" + getParam()
 
@@ -23,8 +33,9 @@ function getbyid() {
 
 function preencherCampos(arr) {
     document.getElementById("nome").value = arr.data.employee_name
-    document.getElementById("salario").value = arr.data.employee_age
-    document.getElementById("idade").value = arr.data.employee_salary
+    document.getElementById("salario").value = arr.data.employee_salary
+    document.getElementById("idade").value = arr.data.employee_age
+    document.getElementById("imagem").value = arr.data.profile_image
 }
 
 function update() {
@@ -45,6 +56,7 @@ function update() {
         name: document.getElementById("nome").value,
         salary: document.getElementById("salario").value,
         age: document.getElementById("idade").value,
+        profile_image: document.getElementById("imagem").value
 
     };
 
@@ -68,7 +80,7 @@ function cadastrar() {
         name: document.getElementById("nome").value,
         salary: document.getElementById("salario").value,
         age: document.getElementById("idade").value,
-
+        profile_image: document.getElementById("imagem").value
     };
 
     xhttp.send(JSON.stringify(NewEmpregado));
