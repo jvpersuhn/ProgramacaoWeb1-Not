@@ -14,17 +14,20 @@ function get() {
 
     function myfunction(arr) {
         var id = 0
-        var out = '<tr><th>Id</th><th>Nome</th><th>Salario</th><th>Idade</th><th>Imagem</th><th>Açoes</th></tr>'
+        var out = '<tr class = "table"><th>Id</th><th>Nome</th><th>Salario</th><th>Idade</th><th>Imagem</th><th>Ações</th></tr>'
         for (let i = 0; i < arr.data.length; i++) {
             id = arr.data[i]['id'];
 
-            if (arr.data[i]['profile_image'] == null){
-                arr.data[i]['profile_image'] = ""
+            if (arr.data[i]['profile_image'] == null) {
+                out += '<tr class = "table"><td>' + arr.data[i]['id'] + '</td>' + '<td>' + arr.data[i]['employee_name'] + '</td>' + '<td>' + arr.data[i]['employee_salary'] + '</td>' + '<td>' + arr.data[i]['employee_age'] + '</td>' +
+                    '<td></td>' +
+                    '<td><button onclick="alertaa(\'' + id + '\')">Excluir</button>' + '<a href="cadastrar.html?id=' + id + '">Editar</a></td>' + '</tr>'
+            } else {
+                out += '<tr class = "table"><td>' + arr.data[i]['id'] + '</td>' + '<td>' + arr.data[i]['employee_name'] + '</td>' + '<td>' + arr.data[i]['employee_salary'] + '</td>' + '<td>' + arr.data[i]['employee_age'] + '</td>' +
+                    '<td><img src="' + arr.data[i]['profile_image'] + '"></td>' +
+                    '<td><button onclick="alertaa(\'' + id + '\')">Excluir</button>' + '<a href="cadastrar.html?id=' + id + '">Editar</a></td>' + '</tr>'
             }
 
-            out += '<tr><td>' + arr.data[i]['id'] + '</td>' + '<td>' + arr.data[i]['employee_name'] + '</td>' + '<td>' + arr.data[i]['employee_salary'] + '</td>' + '<td>' + arr.data[i]['employee_age'] + '</td>' +
-                '<td><img src="' + arr.data[i]['profile_image'] + '"></td>'+
-                '<td><button onclick="alertaa(\'' + id + '\')">Excluir</button></td>' + '<td><a href="cadastrar.html?id=' + id + '"> | Editar</a></td>' + '</tr>'
         }
 
         document.getElementById('lista').innerHTML = out
@@ -42,5 +45,6 @@ function alertaa(codigo) {
         xhttp.open("DELETE", novaurl, true)
         xhttp.send()
         alert("Sucesso")
+        document.location.reload(true)
     }
 }

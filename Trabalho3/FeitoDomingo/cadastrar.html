@@ -7,25 +7,29 @@
     <title>Cadastrar</title>
 
     <script src="scripts/post.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="getbyid()">
-    <label for="">nome</label>
-    <input type="text" name="" id="nome">
-    <br><br>
-    <label for="">salario</label>
-    <input type="text" name="" id="salario">
-    <br><br>
-    <label for="">idade</label>
-    <input type="text" name="" id="idade">
-    <br><br>
-    <label for="">Link imagem</label>
-    <input type="text" name="" id="imagem">
-    <br><br>
+    <div class="corpo">
+        <p>Cadastro</p>
+        <label for="">nome</label>
+        <input type="text" name="" id="nome">
+        <br><br>
+        <label for="">salario</label>
+        <input type="text" name="" id="salario">
+        <br><br>
+        <label for="">idade</label>
+        <input type="text" name="" id="idade">
+        <br><br>
+        <label for="">Link imagem</label>
+        <input type="text" name="" id="imagem">
+        <br><br>
 
-    <button onclick="cadastrar()" id="cadastrar" >Cadastrar</button>
-    <button onclick="update()" id="update">Alterar</button>
-    <a href="index.html">Cancelar</a>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="update()">Alterar</button>
+        <a href="index.html">Cancelar</a>
+    </div>
 </body>
 
 </html>
