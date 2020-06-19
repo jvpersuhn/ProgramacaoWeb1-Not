@@ -5,6 +5,6 @@ function check() {
 
     } else {
         alert("A tela de usuário será implementada futuramente :)")
-        window.location.replace("../index/index.html");
+        window.location.replace("../index.html");
     }
 }
