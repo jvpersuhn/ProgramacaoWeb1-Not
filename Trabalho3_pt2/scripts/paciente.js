@@ -16,8 +16,8 @@ function get() {
         var id = 0
         var out = '<tr class = "table"><th>Id</th><th>Nome</th><th>Problema</th></tr>'
         for (let i = 0; i < arr.length; i++) {
-            out += '<tr class = "table"><td>' + arr[i]['id'] + '</td>' + '<td>' + arr[i]['nome'] + '</td>' + '<td>' + arr[i]['problema'] + '</td>' + 
-            '<button onclick="alertaa(\'' + id + '\')">Excluir</button>' + '<a href="cadastrar_paciente.html?id=' + id + '">Editar</a></td>' + '</tr>'
+            out += '<tr class = "table"><td>' + arr[i]['id'] + '</td>' + '<td>' + arr[i]['nome'] + '</td>' + '<td>' + arr[i]['problema'] + '</td>' + '<td>'+
+            '<button onclick="alertaa(\'' + id + '\')">Excluir</button>' + '<a href="cadastrar_paciente.html?id=' + id + '">Editar</a></td>' + '</td>' + '</tr>'
             }
             document.getElementById('lista').innerHTML = out
         }
