@@ -1,0 +1,144 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# JãoFrango 
+
+API para realização do trabalho 3 de programação web I
+
+## Medicos [/medico]
+
+### Lista medicos [GET]
++ Response 200 (application/json)
+
+        [
+            {
+                "id" : "TesteGetAll1",
+                "nome" : "TesteGetAll1",
+                "especialidade" : "TesteGetAll1"
+            },
+            {
+                "id" : "TesteGetAll2",
+                "nome" : "TesteGetAll2",
+                "especialidade" : "TesteGetAll2"
+            }
+        ]
+
+
+    
+### Lista medico id  [GET /medico/{id}]
++ Parameters
+    + id: "abc123" (string)
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id" : "testeGetById",
+                "nome" : "testeGetById",
+                "especialidade" : "testeGetById"
+            }
+        ]
+    
++ Response 404 (application/json)
+
+        {
+            "message": "Medico não encontrado"
+        }
+
+### Criar medico [POST]
+
+
++ Request (application/json)
+    + Attributes (Medico)
+
++ Response 201 (application/json)
+    + Attributes (Medico)
+
+### Deletar um medico [DELETE /medico/{id}]
+
++ Parameters
+    + id (string)
+
++ Response 204
+
+### Alterar medico [PUT /medico/{id}]
++ Request (application/json)
+    + Attributes (Medico)
+        
+
++ Response 201 (application/json)
+
+    
+
+## Paciente [/paciente]
+
+### Lista paciente [GET]
++ Response 200 (application/json)
+
+        [
+            {
+                "id" : "testeGetAll1",
+                "nome" : "testeGetAll1",
+                "problema" : "testeGetAll1"
+            },
+            {
+                "id" : "testeGetAll2",
+                "nome" : "testeGetAll2",
+                "problema" : "testeGetAll2"
+            }
+        ]
+
+### Lista paciente id  [GET /paciente/{id}]
++ Parameters
+    + id: "abc123" (string)
+
++ Response 200 (application/json)
+
+        
+        {
+                "id" : "testeGetById",
+                "nome" : "testeGetById",
+                "problema" : "testeGetById"
+        }
+       
+    
++ Response 404 (application/json)
+
+        {
+            "message": "Paciente não encontrado"
+        }
+
+### Criar paciente [POST]
+
++ Request (application/json)
+    + Attributes (Paciente)
+
++ Response 201 (application/json)
+
+### Deletar um paciente [DELETE /paciente/{id}]
+
++ Parameters
+    + id (string)
+
++ Response 204
+
+### Alterar paciente [PUT /paciente/{id}]
++ Request (application/json)
+    + Attributes (Paciente)
+        
+
++ Response 201 (application/json)
+    
+
+
+# Data Structures
+
+## Pessoa(object)
++ id (string)
++ nome (string)
+
+## Medico(Pessoa)
++ especialidade (string)
+
+## Paciente(Pessoa)
++ problema (string)
