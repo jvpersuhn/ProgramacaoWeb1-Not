@@ -1,0 +1,150 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# JãoFrango 
+
+API para realização do trabalho 3 de programação web I
+
+## Login [/login]
+
+### Fazer Login [POST]
++ Request (application/json)
+    + Attributes (Login)
+
++ Response 200 (application/json)
+
+        {
+            "token" : "hash"   
+        }
+        
++ Response 401 (application/json)
+
+        {
+            "message" : "Email ou usuario invalido"   
+        }
+        
+## Noticias [/noticias]
+
+### Lista Noticias [GET]
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "1",
+                "publish_date": "2014-01-01T23:28:56.782Z",
+                "title": "Câmara Municipal de Blumenau homenageia professor Mauro Marcelo Mattos, do DSC.",
+                "subtitle": "A Câmara de Vereadores homenageou seis professores que atuam em escolas da rede pública",
+                "body_news": "Os detalhes das apresentações................"
+            },
+            {
+                "id": "2",
+                "publish_date": "2015-01-01T23:28:56.782Z",
+                "title": "1ª Feira de Inovação e Empreendedorismo de Blumenau",
+                "subtitle": "Feira de inovação chega em bluemnau.",
+                "body_news": "Os detalhes das apresentações................"
+            }
+        ]
+
+### Informacoes de uma noticia [GET /noticias/{id}]
++ Response 200 (application/json)
+
+        {
+           "id": "2",
+           "publish_date": "2015-01-01T23:28:56.782Z",
+           "title": "1ª Feira de Inovação e Empreendedorismo de Blumenau",
+           "subtitle": "Feira de inovação chega em bluemnau."
+           "body_news": "Os detalhes das apresentações................"
+        }
+     
++ Response 404 (application/json)
+
+        {
+            "message": "Noticia não encontrada"
+        }
+        
+### Salvar nova noticia [POST /noticias]
++ Request (application/json)
+    + Attributes (Noticia)
+    
++ Response 200 (application/json)
+
+        {
+            "message": "Noticia salva com sucesso"
+        }
+        
+### Editar uma noticia [PUT /noticias/{id}]
+
+ 
+
++ Request (application/json)
+    + Attributes (Noticia)
+    
++ Request (application/json)
+
+        {
+            "title": "new title"
+        }
+
+ 
+
++ Request (application/json)
+
+        {
+            "subtitle": "new subtitle"
+        }
+    
++ Request (application/json)
+
+        {
+            "body_news": "new body_news"
+        }
+
+ 
+
++ Response 200 (application/json)
+
+        {
+            "message": "Noticia salva com sucesso"
+        }
+
+ 
+
++ Response 404 (application/json)
+
+        {
+            "message": "Noticia não encontrada"
+        }
+
+### Deletar uma noticia [DELETE /noticias/{id}]
++ Response 200 (application/json)
+
+        {
+            "message": "Noticia salva com sucesso"
+        }
+        
++ Response 404 (application/json)
+
+        {
+            "message": "Noticia não encontrada"
+        }
+
+        
+# Data Structures
+
+## Login (object)
++ Email (string)
++ Senha (string)
+
+## Pessoa(object)
++ id (string)
++ nome (string)
+
+## Professor(Pessoa)
++ formacao (string)
++ area (string)
++ descricao (string)
+
+## Noticia
++ title (string)
++ subtitle (string)
++ body_news (string)
