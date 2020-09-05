@@ -217,7 +217,77 @@ API para realização do trabalho 1 de programação web II
             "message": "Usuario não autorizado"
         }
 
+## Curso [/curso]
+
+### Lista Curso [GET]
++ Response 200 (application/json)
+
+        [
+            {
+                "id" : "1",
+                "nome" : "Ciência da Computação - Matutino",
+                "horario" : "Matutino"
+                
+            },
+            {
+                "id" : "2",
+                "nome" : "Ciência da Computação - Noturno",
+                "horario" : "Noturno"
+            },
+            {
+                "id" : "3",
+                "nome" : "Sistemas de Informação - Noturno",
+                "horario" : "Noturno"
+            }
+        ]
+        
++ Response 404
+
+        {
+            "menssage" : "Cursos não encontrados!!"
+        }
+        
++ Response 408
+
+        {
+            "menssage" : "Tempo limite da operação excedido!!"
+        }
+
+### Criar curso [POST]
+
++ Request (application/json)
+    + Attributes (Curso)
+
++ Response 201 (application/json)
+
++ Response 401 (application/json)
+
+
+        {
+            "menssage" : "Não foi possível criar um curso"
+        }
+
+### Deletar um curso [DELETE /curso/{id}]
+
++ Parameters
+    + id (string)
+
++ Response 204 (application/json)
++ Response 401 (application/json)
+
+### Alterar curso [PUT /curso/{id}]
++ Request (application/json)
+    + Attributes (Curso)
+        
++ Response 201 (application/json)
++ Response 401 (application/json)
+
 # Data Structures
+
+## Curso(object)
++ id (number)
++ nome (string)
++ horario(object)
 
 ## Pessoa(object)
 + id (string)
