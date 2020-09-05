@@ -3,7 +3,7 @@ HOST: https://polls.apiblueprint.org/
 
 # JãoFrango 
 
-API para realização do trabalho 3 de programação web I
+API para realização do trabalho 1 de programação web II
 
 ## Login [/login]
 
@@ -74,8 +74,6 @@ API para realização do trabalho 3 de programação web I
         
 ### Editar uma noticia [PUT /noticias/{id}]
 
- 
-
 + Request (application/json)
     + Attributes (Noticia)
     
@@ -128,12 +126,98 @@ API para realização do trabalho 3 de programação web I
             "message": "Noticia não encontrada"
         }
 
-        
-# Data Structures
+## Professor [/professor]
 
-## Login (object)
-+ Email (string)
-+ Senha (string)
+### Listar Professores [GET]
++ Response 200 (application/json)
+
++ Response 404 (application/json)
+
+        {
+            "message": "Nenhum professor encontrado"
+        }
+
+
+### Adicionar professor [POST]
++ Request (application/json)
+    + Attributes (Professor)
+    
++ Response 201 (application/json)
+
++ Response 401 (application/json)
+
+        {
+            "message": "Usuario não autorizado"
+        }
+    
+### Deletar professor [DELETE /professor/{id}]
+
++ Response 204 (application/json)
+
++ Response 404 (application/json)
+    
+        {
+            "message": "Professor não encontrado"
+        }
+    
++ Response 401 (application/json)
+    
+        {
+            "message": "Usuario não autorizado"
+        }
+        
+### Alterar professor [PUT /professor/{id}]
+
++ Request (application/json)
+        
+        {
+            "formacao": "nova formacao",
+            "nome": "novo nome",
+            "area": "nova area",
+            "descricao": "nova descricao"
+        }
+
++ Request (application/json)
+    
+        {
+            "formacao": "nova formacao"
+        }
+        
++ Request (application/json)
+    
+        {
+            "nome": "novo nome"
+        }
+        
++ Request (application/json)
+
+        {
+            "area": "nova area"
+        }
+        
++ Request (application/json)
+        
+        {
+            "descricao": "nova descricao"
+        }  
+
+
++ Response 201 (application/json)
+
+
++ Response 404 (application/json)
+    
+        {
+            "message": "Professor não encontrado"
+        }
+        
++ Response 401 (application/json)
+
+        {
+            "message": "Usuario não autorizado"
+        }
+
+# Data Structures
 
 ## Pessoa(object)
 + id (string)
@@ -143,6 +227,10 @@ API para realização do trabalho 3 de programação web I
 + formacao (string)
 + area (string)
 + descricao (string)
+
+## Login (object)
++ email (string)
++ senha (string)
 
 ## Noticia
 + title (string)
