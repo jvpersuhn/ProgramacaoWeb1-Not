@@ -83,8 +83,6 @@ API para realização do trabalho 1 de programação web II
             "title": "new title"
         }
 
- 
-
 + Request (application/json)
 
         {
@@ -97,15 +95,11 @@ API para realização do trabalho 1 de programação web II
             "body_news": "new body_news"
         }
 
- 
-
 + Response 200 (application/json)
 
         {
             "message": "Noticia salva com sucesso"
         }
-
- 
 
 + Response 404 (application/json)
 
@@ -114,11 +108,7 @@ API para realização do trabalho 1 de programação web II
         }
 
 ### Deletar uma noticia [DELETE /noticias/{id}]
-+ Response 200 (application/json)
-
-        {
-            "message": "Noticia salva com sucesso"
-        }
++ Response 204 (application/json)
         
 + Response 404 (application/json)
 
@@ -151,17 +141,16 @@ API para realização do trabalho 1 de programação web II
         }
     
 ### Deletar professor [DELETE /professor/{id}]
-
 + Response 204 (application/json)
 
 + Response 404 (application/json)
-    
+
         {
             "message": "Professor não encontrado"
         }
     
 + Response 401 (application/json)
-    
+
         {
             "message": "Usuario não autorizado"
         }
@@ -169,7 +158,7 @@ API para realização do trabalho 1 de programação web II
 ### Alterar professor [PUT /professor/{id}]
 
 + Request (application/json)
-        
+
         {
             "formacao": "nova formacao",
             "nome": "novo nome",
@@ -178,13 +167,13 @@ API para realização do trabalho 1 de programação web II
         }
 
 + Request (application/json)
-    
+
         {
             "formacao": "nova formacao"
         }
         
 + Request (application/json)
-    
+
         {
             "nome": "novo nome"
         }
@@ -196,14 +185,12 @@ API para realização do trabalho 1 de programação web II
         }
         
 + Request (application/json)
-        
+
         {
             "descricao": "nova descricao"
         }  
-
-
+        
 + Response 201 (application/json)
-
 
 + Response 404 (application/json)
     
@@ -245,6 +232,29 @@ API para realização do trabalho 1 de programação web II
 
         {
             "menssage" : "Cursos não encontrados!!"
+        }
+        
++ Response 408
+
+        {
+            "menssage" : "Tempo limite da operação excedido!!"
+        }
+
+### Lista Curso [GET/cursos/{id}]
++ Response 200 (application/json)
+
+        [
+            {
+                "id" : "1",
+                "nome" : "Ciência da Computação - Matutino",
+                "horario" : "Matutino"
+            }
+        ]
+
++ Response 404
+
+        {
+            "menssage" : "Curso não encontrado!!"
         }
         
 + Response 408
