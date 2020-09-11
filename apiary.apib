@@ -301,6 +301,30 @@ API para realização do trabalho 1 de programação web II
 + Response 201 (application/json)
 + Response 401 (application/json)
 
+
+## Monitores [/monitores]
+
+### Alterar monitor [PUT /monitortes/<id>]
++ Request (application/json)
+
+        {
+            "nome": "Alex Seródio Gonçalves",
+            "area": "Tecnologias em Computação Gráfica",
+            "emails" : {
+                "principal": "alexserodio@furb.br",
+                "opcional": "alequis01@gmail.com"
+            }
+        }
+        
++ Response 201 (application/json)
+    
++ Response 401 (application/json)
+
+        {
+            "message": "Usuario não autorizado"
+        }
+
+
 # Data Structures
 
 ## Curso(object)
