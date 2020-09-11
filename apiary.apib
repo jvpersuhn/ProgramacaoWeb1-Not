@@ -301,29 +301,13 @@ API para realização do trabalho 1 de programação web II
 + Response 201 (application/json)
 + Response 401 (application/json)
 
+## Curso [/Grade]
 
-## Monitores [/monitores]
+### Alterar grade[PUT/grade/{id}]
 
-### Alterar monitor [PUT /monitortes/<id>]
-+ Request (application/json)
-
-        {
-            "nome": "Alex Seródio Gonçalves",
-            "area": "Tecnologias em Computação Gráfica",
-            "email" : {
-                "principal": "alexserodio@furb.br",
-                "opcional": "alequis01@gmail.com"
-            }
-        }
-        
-+ Response 201 (application/json)
++ Request (aplication/json)
     
-+ Response 401 (application/json)
-
-        {
-            "message": "Usuario não autorizado"
-        }
-
++ Response 201
 
 # Data Structures
 
@@ -331,6 +315,10 @@ API para realização do trabalho 1 de programação web II
 + id (number)
 + nome (string)
 + horario(object)
+
+## Grade(object)
++ id (number)
++ nome ()
 
 ## Pessoa(object)
 + id (string)
