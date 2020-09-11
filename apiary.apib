@@ -14,7 +14,7 @@ API para realização do trabalho 1 de programação web II
 + Response 200 (application/json)
 
         {
-            "token" : "hash"   
+            "token" : "hash"
         }
         
 + Response 401 (application/json)
@@ -72,7 +72,7 @@ API para realização do trabalho 1 de programação web II
             "message": "Noticia salva com sucesso"
         }
         
-### Editar uma noticia [PUT /noticias/{id}]
+### Editar uma noticia [PUT/noticias/{id}]
 
 + Request (application/json)
     + Attributes (Noticia)
@@ -107,7 +107,7 @@ API para realização do trabalho 1 de programação web II
             "message": "Noticia não encontrada"
         }
 
-### Deletar uma noticia [DELETE /noticias/{id}]
+### Deletar uma noticia [DELETE/noticias/{id}]
 + Response 204 (application/json)
         
 + Response 404 (application/json)
@@ -127,7 +127,7 @@ API para realização do trabalho 1 de programação web II
             "message": "Nenhum professor encontrado"
         }
         
-### Informaçoes sobre um Professores [GET /professor/<id>]
+### Informaçoes sobre um Professores [GET/professor/<id>]
 + Response 200 (application/json)
         
 + Response 404 (application/json)
@@ -149,7 +149,7 @@ API para realização do trabalho 1 de programação web II
             "message": "Usuario não autorizado"
         }
     
-### Deletar professor [DELETE /professor/{id}]
+### Deletar professor [DELETE/professor/{id}]
 + Response 204 (application/json)
 
 + Response 404 (application/json)
@@ -164,7 +164,7 @@ API para realização do trabalho 1 de programação web II
             "message": "Usuario não autorizado"
         }
         
-### Alterar professor [PUT /professor/{id}]
+### Alterar professor [PUT/professor/{id}]
 
 + Request (application/json)
 
@@ -182,7 +182,7 @@ API para realização do trabalho 1 de programação web II
             "linkSkype": "nova linkSkype",
             "gTalk": "nova gTalk",
             "linkCurriculo": "nova linkCurriculo",
-            "horario": "nova horario"
+            "horario": "1"
 
         }
 
@@ -273,7 +273,7 @@ API para realização do trabalho 1 de programação web II
 + Response 404 (application/json)
     
         {
-            "message": "Professor não encontrado"
+            "menssage": "Professor não encontrado"
         }
         
 + Response 401 (application/json)
@@ -291,18 +291,18 @@ API para realização do trabalho 1 de programação web II
             {
                 "id" : "1",
                 "nome" : "Ciência da Computação - Matutino",
-                "horario" : "Matutino"
+                "horario" : "1"
                 
             },
             {
                 "id" : "2",
                 "nome" : "Ciência da Computação - Noturno",
-                "horario" : "Noturno"
+                "horario" : "2"
             },
             {
                 "id" : "3",
                 "nome" : "Sistemas de Informação - Noturno",
-                "horario" : "Noturno"
+                "horario" : "3"
             }
         ]
         
@@ -325,7 +325,7 @@ API para realização do trabalho 1 de programação web II
             {
                 "id" : "1",
                 "nome" : "Ciência da Computação - Matutino",
-                "horario" : "Matutino"
+                "horario" : "4"
             }
         ]
 
@@ -357,7 +357,7 @@ API para realização do trabalho 1 de programação web II
         
 
 
-### Deletar um curso [DELETE /curso/{id}]
+### Deletar um curso [DELETE/curso/{id}]
 
 + Parameters
     + id (string)
@@ -374,7 +374,7 @@ API para realização do trabalho 1 de programação web II
 
 ## Monitores [/monitores]
 
-### Alterar monitor [PUT /monitor/{id}]
+### Alterar monitor [PUT/monitor/{id}]
 
 + Request (application/json)
         
@@ -384,7 +384,8 @@ API para realização do trabalho 1 de programação web II
             "email": {
                 "principal": "alexserodio@furb.br",
                 "opcional": "alequis01@gmail.com"
-            }
+            },
+            "horario" : "1"
         }
         
 + Response 201 (application/json)
@@ -396,15 +397,15 @@ API para realização do trabalho 1 de programação web II
         }
 
 
-## Grade [/grade]
+## Horario [/horario]
 
-### Alterar grade[PUT/grade/{id}]
+### Alterar horario[PUT/horario/{id}]
 
 + Request (aplication/json)
-    + Attributes (Grade)
+    + Attributes (Horario)
 
 + Response 200 (application/json)
-    
+
 + Response 200 (application/json)
 
         {
@@ -420,7 +421,7 @@ API para realização do trabalho 1 de programação web II
         {
             "menssage" : "Grade não encontrada!"
         }
-    
+
 + Response 409 (application/json)
 
         {
@@ -442,8 +443,8 @@ API para realização do trabalho 1 de programação web II
 + nome (string)
 + horario(object)
 
-## Grade(object)
-+ horario (number)
+## Horario (object)
++ id (string)
 + inicio (string)
 + fim (string)
 + periodo (string)
