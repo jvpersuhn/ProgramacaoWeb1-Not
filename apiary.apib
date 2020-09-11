@@ -303,6 +303,29 @@ API para realização do trabalho 1 de programação web II
 + Response 201 (application/json)
 + Response 401 (application/json)
 
+## Monitores [/monitores]
+
+### Alterar monitor [PUT /monitor/{id}]
+
++ Request (application/json)
+        {
+            "name": "Alex Seródio Gonçalves",
+            "name": "Tecnologias em Computação Gráfica",
+            "email": {
+                "principal": "alexserodio@furb.br",
+                "opcional": "alequis01@gmail.com"
+            }
+        }
+        
++ Response 201 (application/json)
+
++ Response 401 (application/json)
+
+        {
+            "menssage" : "Monitor não encontrado!"
+        }
+
+
 ## Grade [/grade]
 
 ### Alterar grade[PUT/grade/{id}]
@@ -315,7 +338,7 @@ API para realização do trabalho 1 de programação web II
 + Response 200 (application/json)
     
     {
-        Attributes (Grade)
+        + Attributes (Grade)
         "status" : "sucesso"
     }
 
