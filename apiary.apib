@@ -171,8 +171,19 @@ API para realização do trabalho 1 de programação web II
         {
             "formacao": "nova formacao",
             "nome": "novo nome",
-            "area": "nova area",
-            "descricao": "nova descricao"
+            "areaConcetracao": "nova areaConcetracao",
+            "areaTematicaCurso": "nova areaTematicaCurso",
+            "areaPesquisa": "nova areaPesquisa",
+            "descricao": "nova descricao",
+            "disciplinas": "nova disciplinas",
+            "sala": "nova sala",
+            "emailPrincipal": "nova emailPrincipal",
+            "linkSite": "nova linkSite",
+            "linkSkype": "nova linkSkype",
+            "gTalk": "nova gTalk",
+            "linkCurriculo": "nova linkCurriculo",
+            "horario": "nova horario"
+
         }
 
 + Request (application/json)
@@ -190,14 +201,72 @@ API para realização do trabalho 1 de programação web II
 + Request (application/json)
 
         {
-            "area": "nova area"
+            "areaConcetracao": "nova areaConcetracao"
+        }
++ Request (application/json)
+
+        {
+            "areaTematicaCurso": "nova areaTematicaCurso"
+        }
++ Request (application/json)
+
+        {
+            "areaPesquisa": "nova areaPesquisa"
         }
         
 + Request (application/json)
 
         {
             "descricao": "nova descricao"
-        }  
+        }
+
++ Request (application/json)
+
+        {
+            "disciplinas": "nova disciplinas"
+        }
+
++ Request (application/json)
+
+        {
+            "sala": "nova sala"
+        }
+
++ Request (application/json)
+
+        {
+            "emailPrincipal": "nova emailPrincipal"
+        }
+
++ Request (application/json)
+
+        {
+            "linkSite": "nova linkSite"
+        }
+
++ Request (application/json)
+
+        {
+            "linkSkype": "nova linkSkype"
+        }
+
++ Request (application/json)
+
+        {
+            "gTalk": "nova gTalk"
+        }
+
++ Request (application/json)
+
+        {
+            "linkCurriculo": "nova linkCurriculo"
+        }
+
++ Request (application/json)
+
+        {
+            "horario": "nova horario"
+        }
         
 + Response 201 (application/json)
 
@@ -385,8 +454,18 @@ API para realização do trabalho 1 de programação web II
 
 ## Professor(Pessoa)
 + formacao (string)
-+ area (string)
++ areaConcetracao (string)
++ areaTematicaCurso (string)
++ areaPesquisa (string)
 + descricao (string)
++ disciplinas (string)
++ sala (string)
++ emailPrincipal (string)
++ linkSite (string)
++ linkSkype (string)
++ gTalk (string)
++ linkCurriculo (string)
++ horario(object)
 
 ## Login (object)
 + email (string)
