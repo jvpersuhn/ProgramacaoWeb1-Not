@@ -285,6 +285,8 @@ API para realização do trabalho 1 de programação web II
         {
             "menssage" : "Não foi possível criar um curso"
         }
+        
+
 
 ### Deletar um curso [DELETE /curso/{id}]
 
@@ -306,9 +308,37 @@ API para realização do trabalho 1 de programação web II
 ### Alterar grade[PUT/grade/{id}]
 
 + Request (aplication/json)
-    
-+ Response 201
+    + Attributes (Grade)
 
++ Response 200 (application/json)
+    
++ Response 200 (application/json)
+    
+    {
+        Attributes (Grade)
+        "status" : "sucesso"
+    }
+
++ Response 404 (application/json)
+    
+    {
+        "menssage" : "Grade não encontrada!"
+    }
+    
++ Response 409
+
+    {
+        "menssage" : "Conflito de Grade!"
+    }
+
++ Response 423
+
+    {
+        "menssage" : "Grade não pode ser alterada!"
+    }
+
+
+    
 # Data Structures
 
 ## Curso(object)
@@ -317,8 +347,10 @@ API para realização do trabalho 1 de programação web II
 + horario(object)
 
 ## Grade(object)
-+ id (number)
-+ nome ()
++ horario (number)
++ inicio (string)
++ fim (string)
++ periodo (string)
 
 ## Pessoa(object)
 + id (string)
